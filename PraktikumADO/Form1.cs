@@ -42,5 +42,24 @@ namespace PraktikumADO
             conn = new SqlConnection(
                 "Data Source=LAPTOP-PH9T3875\\NAWFAL;Initial Catalog=DBAkademikADO;Integrated Security=True");
         }
+
+        private void btnHitungMhs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "SELECT COUNT(*) FROM Mahasiswa";
+
+                cmd = new SqlCommand(query, conn);
+
+                int jumlah = (int)cmd.ExecuteScalar();
+
+                txtHasil.Text = jumlah.ToString();
+
+                conn.Close();
+            }
+        }
     }
 }
