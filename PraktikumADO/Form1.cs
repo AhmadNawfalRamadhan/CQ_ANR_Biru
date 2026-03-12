@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace PraktikumADO
 {
@@ -22,13 +23,22 @@ namespace PraktikumADO
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                MessageBox.Show("Koneksi ke database berhasil");
+
+                conn.Close();
+            }
 
         }
 
         private void Koneksi()
         {
             conn = new SqlConnection(
-                "Data Source=DESKTOP-9K7QG8P;Initial Catalog=PraktikumADO;Integrated Security=True");
+                "Data Source=LAPTOP-PH9T3875\\NAWFAL;Initial Catalog=DBAkademikADO;Integrated Security=True");
         }
     }
 }
