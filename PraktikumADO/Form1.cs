@@ -78,8 +78,12 @@ namespace PraktikumADO
 
                 int jumlah = (int)cmd.ExecuteScalar();
 
-                txtHasil.Text = jumlah.ToString();  
+                txtHasil.Text = jumlah.ToString();
                 conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
