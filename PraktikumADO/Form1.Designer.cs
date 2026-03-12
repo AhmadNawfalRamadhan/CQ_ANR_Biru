@@ -54,6 +54,7 @@
             this.btnHitungMhs.TabIndex = 1;
             this.btnHitungMhs.Text = "Hitung Mhs";
             this.btnHitungMhs.UseVisualStyleBackColor = true;
+            this.btnHitungMhs.Click += new System.EventHandler(this.btnHitungMhs_Click);
             // 
             // btnHitungMk
             // 
@@ -63,6 +64,7 @@
             this.btnHitungMk.TabIndex = 2;
             this.btnHitungMk.Text = "Hitung Mk";
             this.btnHitungMk.UseVisualStyleBackColor = true;
+            this.btnHitungMk.Click += new System.EventHandler(this.btnHitungMk_Click);
             // 
             // btnUpdate
             // 
@@ -72,6 +74,7 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label1
             // 
